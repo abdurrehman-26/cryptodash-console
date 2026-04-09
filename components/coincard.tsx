@@ -12,14 +12,14 @@ function CoinCard({ coin }: { coin: CoinData }) {
       : "text-red-500";
 
   return (
-    <Card className="hover:shadow-lg transition p-4">
+    <Card className="hover:shadow transition p-4">
       <CardHeader className="flex items-center space-x-4">
         <Image
           src={coin.image}
           alt={coin.name}
           width={48}
           height={48}
-          className="rounded-full h-auto"
+          className="rounded-full"
         />
         <div>
           <CardTitle className="text-lg">
