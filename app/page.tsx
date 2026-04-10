@@ -2,7 +2,7 @@ import CoinCard from "@/components/coincard";
 import { CoinData } from "@/types/CoinData";
 
 export default async function Home() {
-  const res = await fetch("http://localhost:3001/crypto", { next: { revalidate: 60 } });
+  const res = await fetch("http://localhost:3001/crypto", { cache: 'no-store' });
   const coinData: CoinData[] = await res.json();
 
   return (
