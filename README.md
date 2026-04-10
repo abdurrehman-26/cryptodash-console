@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CryptoDash Console
+
+A lightweight crypto dashboard that displays **near real-time market data with 1-minute cached updates** from a backend service.
+
+---
+
+## What is this?
+
+CryptoDash Console is a web-based dashboard that shows cryptocurrency prices, trends, and basic market information.
+
+This makes it suitable for:
+- Dashboards and internal tools
+- Lightweight analytics views
+- Low-cost production deployments
+
+---
+
+## How it works
+
+- Frontend requests crypto data from backend API
+- Backend fetches and caches external crypto data
+- Cached data is served for **1 minute**
+- After cache expires, fresh data is fetched again
+
+This design ensures:
+- Faster responses
+- Reduced API rate limits
+- Stable and predictable output
+
+---
+
+## Tech Stack
+
+- Next.js
+- TypeScript
+- REST API integration for crypto data
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/abdurrehman-26/cryptodash-console.git
+cd cryptodash-console
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Start development
+```bash
+npm run dev
+```
 
-## Learn More
+### 4. Build the frontend
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 5. Start the server
+```bash
+npm run start
+```
