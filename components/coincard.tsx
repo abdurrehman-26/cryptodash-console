@@ -65,7 +65,7 @@ function CoinCard({ coin }: { coin: CoinData }) {
                 {item.label}
               </p>
               <p className={`text-xs font-semibold ${getPercentColor(item.value)}`}>
-                {item.value}%
+                {Number(item.value).toFixed(1)}%
               </p>
             </div>
           ))}
